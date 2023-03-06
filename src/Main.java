@@ -1,12 +1,15 @@
-import jcuda.*;
-import jcuda.runtime.*;
 public class Main
 {
     public static void main(String args[])
     {
-        Pointer pointer = new Pointer();
-        JCuda.cudaMalloc(pointer, 4);
-        System.out.println("Pointer: "+pointer);
-        JCuda.cudaFree(pointer);
+        AbbTree a = new AbbTree();
+        a.insert("ASAP", "as soon as possible");
+        a.insert("AKA" , "also know as");
+        a.insert("AI" , "artificial intelligence");
+        a.insert("ATM", "at this moment");
+        a.insert("B2B", "business to business");
+        a.insert("BB", "black berry");
+
+        a.printBranch(3);
     }
 }
